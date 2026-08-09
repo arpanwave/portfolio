@@ -155,7 +155,7 @@ export default function Navbar() {
 
   // Close when resizing to desktop
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 768px)");
+    const mq = window.matchMedia("(min-width: 1024px)");
     const onChange = (e: MediaQueryListEvent) => {
       if (e.matches) setOpen(false);
     };
@@ -240,7 +240,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Primary" className="hidden md:flex gap-8 items-center">
+        <nav aria-label="Primary" className="hidden lg:flex gap-8 items-center">
           {links.map((l) => (
             <a
               key={l.href}
@@ -266,7 +266,7 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden flex-1 flex justify-end items-center text-[#bec6e0] cursor-pointer"
+          className="lg:hidden flex-1 flex justify-end items-center text-[#bec6e0] cursor-pointer"
         >
           {open ? <X /> : <Menu />}
         </button>
@@ -276,7 +276,7 @@ export default function Navbar() {
       <div
         aria-hidden="true"
         onClick={close}
-        className={`md:hidden fixed left-0 right-0 top-[70px] bottom-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ease-out ${
+        className={`lg:hidden fixed left-0 right-0 top-[70px] bottom-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ease-out ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       />
@@ -286,7 +286,7 @@ export default function Navbar() {
         id="mobile-nav"
         aria-label="Mobile"
         aria-hidden={!open}
-        className={`md:hidden border-b border-[#bec6e0]/24 absolute top-full left-0 w-full z-50 origin-top bg-[#0b1326]/97 backdrop-blur-xl border-t border-[#bec6e0]/10 flex flex-col px-6 py-3 shadow-2xl shadow-black/40 transition-[opacity,transform] duration-300 ease-out ${
+        className={`lg:hidden border-b border-[#bec6e0]/24 absolute top-full left-0 w-full z-50 origin-top bg-[#0b1326]/97 backdrop-blur-xl border-t border-[#bec6e0]/10 flex flex-col px-6 py-3 shadow-2xl shadow-black/40 transition-[opacity,transform] duration-300 ease-out landscape:max-h-[calc(100dvh-70px)] landscape:overflow-y-auto ${
           open
             ? "opacity-100 translate-y-0 scale-100 pointer-events-auto visible"
             : "opacity-0 -translate-y-3 scale-[0.98] pointer-events-none invisible"
