@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Content */}
           <div className="lg:col-span-7 lg:pt-[60px]">
-            <p className="pb-5 pl-2 font-display font-medium text-silver sm:pb-6 md:pb-7 lg:pb-8">
+            <p className="pb-5 pl-2 font-display font-medium text-[#EEF0F1] sm:pb-6 md:pb-7 lg:pb-8 md:text-xl">
               Hi, my name is
             </p>
 
@@ -29,9 +29,9 @@ export default function Hero() {
             </h1>
 
             <p className="relative z-10 mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
-              <span className="bg-gradient-to-r from-[#f8fafc] via-[#bec6e0] to-[#4b5563] bg-clip-text text-transparent">
-                a full-stack developer
-              </span>
+              <span className="bg-[linear-gradient(to_top,#56616A_0%,#56616A_29%,#C3C8CB_40%,#E5E8EA_100%)] bg-clip-text text-transparent">
+  a full-stack developer
+</span>
             </p>
 
             <p className="relative z-10 mt-6 max-w-2xl font-body text-base font-medium leading-relaxed text-silver/90 sm:mt-7 sm:text-lg md:mt-8 md:text-xl lg:mt-10 lg:text-2xl">
