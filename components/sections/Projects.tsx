@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AppWindowMac, ArrowUpRight } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
@@ -217,7 +216,23 @@ export default function Projects() {
   // it will mount directly into its final state.
   const alreadyAnimated = useRef(hasAnimatedOnce).current;
 
-  const viewport = { once: true, amount: 0.15 };
+  const [isShortMobileLandscape, setIsShortMobileLandscape] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      setIsShortMobileLandscape(
+        window.innerWidth > window.innerHeight && window.innerHeight < 500
+      );
+    };
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const viewport = {
+    once: true,
+    amount: isShortMobileLandscape ? 0.1 : 0.15,
+  };
 
   // First mount:
   //   hidden -> show when entering viewport

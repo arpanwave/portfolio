@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left Content */}
           <div className="lg:col-span-7 lg:pt-[60px]">
-            <p className="pb-5 pl-2 font-display font-medium text-[#7bd0ff] sm:pb-6 md:pb-7 lg:pb-8">
+            <p className="pb-5 pl-2 font-display font-medium text-silver sm:pb-6 md:pb-7 lg:pb-8">
               Hi, my name is
             </p>
 
