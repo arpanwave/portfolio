@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Coffee, Server, GitBranch } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { aboutInfo, aboutStack, aboutStats } from "@/data/about";
@@ -53,10 +54,26 @@ const fadeOnly: Variants = {
 export default function About() {
   const reduce = useReducedMotion();
   const variants = reduce ? fadeOnly : reveal;
+  const [isShortLandscape, setIsShortLandscape] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      setIsShortLandscape(
+        window.innerWidth > window.innerHeight && window.innerHeight < 500
+      );
+    };
+    check();
+    window.addEventListener("resize", check);
+    window.addEventListener("orientationchange", check);
+    return () => {
+      window.removeEventListener("resize", check);
+      window.removeEventListener("orientationchange", check);
+    };
+  }, []);
 
   const viewport = {
     once: true,
-    amount: 0.45,
+    amount: isShortLandscape ? 0.24 : 0.45,
   };
 
   return (
