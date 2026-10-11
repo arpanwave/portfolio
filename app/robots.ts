@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://arpanverma.vercel.app/";
+  const baseUrl = "https://arpanwave.github.io/";
 
   return {
     rules: {

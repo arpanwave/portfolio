@@ -66,11 +66,11 @@ export const metadata: Metadata = {
 
   // Add this when you have your final domain.
   alternates: {
-    canonical: "https://arpanverma.vercel.app/",
+    canonical: "https://arpanwave.github.io/",
   },
 
   // Add this when you have your final domain.
-  metadataBase: new URL("https://arpanverma.vercel.app/"),
+  metadataBase: new URL("https://arpanwave.github.io/"),
 };
 
 export const viewport: Viewport = {

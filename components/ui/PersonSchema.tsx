@@ -10,11 +10,11 @@ export default function PersonSchema() {
       "Software Engineer focused on building scalable, reliable backend systems and modern web applications.",
 
     // Add your domain later:
-    // url: "https://yourdomain.com",
+    url: "https://arpanwave.github.io/",
 
     // Add your professional profiles later:
      sameAs: [
-       "https://github.com/arpan-v",
+       "https://github.com/arpanwave",
        "www.linkedin.com/in/arpan99",
     ],
   };
